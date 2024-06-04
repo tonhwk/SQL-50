@@ -1,3 +1,12 @@
+--# This didn't work
+select
+    s.product_id, min(s.year) as first_year, s.quantity, price
+from
+    Sales s
+group by 
+    s.product_id
+
+-- This works
 select
     s.product_id,
     s.year as first_year,
